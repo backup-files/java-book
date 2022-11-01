@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Hello, world";
+commitMessage=${1?Error: No commit message given};
+git add .
+git commit -m "$commitMessage"
