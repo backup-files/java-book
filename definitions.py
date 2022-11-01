@@ -7,16 +7,16 @@ XPATH = By.XPATH
 ID = By.ID
 CSS_SELECTOR = By.CSS_SELECTOR
 
-class Section:
-    def __init__(self, link):
-        self.link = link
-        self.topics = []
-    
-    def add_topic(self, topic):
-        self.topics.append(topic)
-
 @dataclass
 class Topic:
     link: str
     title: str
     content: str
+
+@dataclass
+class Section:
+    link: str
+    topics: list[Topic]
+    
+    def add_topic(self, topic: Topic):
+        self.topics.append(topic)
