@@ -8,3 +8,6 @@ CSS_SELECTOR = By.CSS_SELECTOR
 
 class Section:
     pass
+
+class Topic:
+    pass
