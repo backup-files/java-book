@@ -7,7 +7,8 @@ ID = By.ID
 CSS_SELECTOR = By.CSS_SELECTOR
 
 class Section:
-    pass
+    def __init__(self):
+        self.topics = []
 
 class Topic:
     pass
