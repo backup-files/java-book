@@ -7,7 +7,8 @@ ID = By.ID
 CSS_SELECTOR = By.CSS_SELECTOR
 
 class Section:
-    def __init__(self):
+    def __init__(self, link):
+        self.link = link
         self.topics = []
 
 class Topic:
