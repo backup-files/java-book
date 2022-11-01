@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from dataclasses import dataclass
+from typing import List
 
 TAG_NAME = By.TAG_NAME
 CLASS_NAME = By.CLASS_NAME
@@ -16,7 +17,7 @@ class Topic:
 @dataclass
 class Section:
     link: str
-    topics: list[Topic]
+    topics: List[Topic]
     
     def add_topic(self, topic: Topic):
         self.topics.append(topic)
