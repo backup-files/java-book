@@ -17,6 +17,7 @@ class Topic:
 @dataclass
 class Section:
     link: str
+    title: str
     topics: List[Topic]
     
     def add_topic(self, topic: Topic):
