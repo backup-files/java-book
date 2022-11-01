@@ -10,6 +10,9 @@ class Section:
     def __init__(self, link):
         self.link = link
         self.topics = []
+    
+    def add_topic(self, topic):
+        self.topics.append(topic)
 
 class Topic:
     def __init__(self, link, title, content):
