@@ -11,4 +11,7 @@ class Section:
         self.topics = []
 
 class Topic:
-    pass
+    def __init__(self, link, title, content):
+        self.link = link
+        self.title = title
+        self.content = content
