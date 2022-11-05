@@ -7,7 +7,7 @@ git branch -M feature-branch
 git commit -m "$commitMessage"
 git push origin feature-branch
 gh pr create --title "$commitMessage" --body "$commitMessage" 
-gh pr merge feature-branch --merge --auto
+gh pr merge feature-branch --merge 
 git checkout main
 git branch -D feature-branch || echo 'Feature branch already deleted'
 git pull
