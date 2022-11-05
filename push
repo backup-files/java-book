@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+git pull
 commitMessage=${1?Error: No commit message given};
 git add .
 git branch -M feature-branch
