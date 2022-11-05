@@ -1,2 +1,10 @@
 #!/usr/bin/env bash
 
+commitMessage=${1?Error: No commit message given};
+git add .
+git branch -M feature-branch
+git commit -m "$commitMessage"
+git push origin feature-branch
+gh pr create --title "$commitMessage" 
+gh pr merge feature-branch
+git branch --delete feature-branch
