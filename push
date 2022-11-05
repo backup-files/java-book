@@ -8,4 +8,4 @@ git push origin feature-branch
 gh pr create --title "$commitMessage" --body "$commitMessage" 
 gh pr merge feature-branch --merge --auto
 git checkout main
-git branch --delete feature-branch
+git branch -D feature-branch || echo 'Feature branch already deleted'
