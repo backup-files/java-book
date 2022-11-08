@@ -22,3 +22,5 @@ class Section:
     
     def add_topic(self, topic: Topic):
         self.topics.append(topic)
+
+MAIN_LINK = ""
