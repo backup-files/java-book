@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+FOLDER=$(pwd) 
+
+RUN_CONFIG_FILE_NAME="$FOLDER/.run.config.sh"
+
+if [ ! -f $RUN_CONFIG_FILE_NAME ]; then 
+    echo "[ERROR] - $RUN_CONFIG_FILE_NAME file not found";
+    exit 1;
+fi 
+
+run_script_folder=""
+
+source $RUN_CONFIG_FILE_NAME;
+
+if [ ! -d $run_script_folder -o ! -f "$run_script_folder/run.sh" ]; then 
+    echo '[ERROR] - .run.config.sh does not contain valid run_script_folder';
+    exit 1;
+fi
+
+# should be copied to a folder in the path variable
+sh "$run_script_folder/run.sh"
